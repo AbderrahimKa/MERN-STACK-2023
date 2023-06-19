@@ -1,4 +1,4 @@
-const Ninja = require("./Ninja")
+const Ninja = require("../Practice/Ninja");
 
 class Sensei extends Ninja {
     constructor(wisdom = 10) {

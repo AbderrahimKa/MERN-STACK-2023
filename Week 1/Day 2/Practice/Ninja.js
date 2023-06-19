@@ -9,20 +9,20 @@ class Ninja {
         console.log(`${this.name} is the name of your ninja`);
     }
     showStats() {
-        console.log(`${this.name} is the name of your ninja , he have : 
-        ${this.health} hp and speed of ${this.speed} speed and strength of ${this.strength}`);
+        console.log(`
+        ${this.name} is the name of your ninja , he have : 
+        ${this.health} hp and speed of ${this.speed} speed and strength of ${this.strength}
+        `);
     }
     drinksake() {
         this.health += 10;
     }
 }
+module.exports = Ninja;
+return module.exports;
 
-module.exports = {
-    Ninja: Ninja
-}
-
-const ninja1 = new Ninja("Hyabusa");
-ninja1.sayName();
-ninja1.showStats();
-ninja1.drinksake();
-ninja1.showStats();
+// const ninja1 = new Ninja("Hyabusa");
+// ninja1.sayName();
+// ninja1.showStats();
+// ninja1.drinksake();
+// ninja1.showStats();
