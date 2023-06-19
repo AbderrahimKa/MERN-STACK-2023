@@ -1,9 +1,9 @@
 class Ninja {
-    constructor(name) {
+    constructor(name , health=100, speed =3 ,strength=3) {
         this.name = name;
-        this.health = 100;
-        this.speed = 3;
-        this.strength = 3;
+        this.health = health;
+        this.speed = speed;
+        this.strength = strength;
     }
     sayName() {
         console.log(`${this.name} is the name of your ninja`);
@@ -15,6 +15,10 @@ class Ninja {
     drinksake() {
         this.health += 10;
     }
+}
+
+module.exports = {
+    Ninja: Ninja
 }
 
 const ninja1 = new Ninja("Hyabusa");
