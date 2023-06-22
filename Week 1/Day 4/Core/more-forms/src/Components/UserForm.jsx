@@ -20,7 +20,7 @@ const UserForm = (props) => {
     const handelFirstName = (e) => {
         setFirstname(e.target.value);
         if(e.target.value.length < 3) {
-            setFirstNameError("First Name must be at least 2 characters");
+            setFirstNameError("First Name must be at least 3 characters");
         } else {
             setFirstNameError("");
         }
@@ -29,7 +29,7 @@ const UserForm = (props) => {
     const handelLastName = (e) => {
         setLastname(e.target.value);
         if(e.target.value.length < 3) {
-            setLastnameError("Last Name must be at least 2 characters");
+            setLastnameError("Last Name must be at least 3 characters");
         } else {
             setLastnameError("");
         }
