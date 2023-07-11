@@ -3,7 +3,7 @@ import axios from 'axios';
 import { useParams } from 'react-router-dom';
 
 function App() {
-  const [selectedOption, setSelectedOption] = useState('planets');
+  const [selectedOption, setSelectedOption] = useState("peoples");
   const [selectedId, setSelectedId] = useState('');
   const [error, setError] = useState(null);
   const { resource, id } = useParams();
@@ -30,13 +30,13 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
+        console.log(setSelectedOption);
         const apiUrl = `https://swapi.dev/api/${resource}/${id}`;
         const response = await axios.get(apiUrl);
         const data = response.data;
         setResourceData(data);
       } catch (error) {
         console.error('Error fetching data:', error);
-        setResourceData(null);
       }
     };
 
@@ -50,7 +50,7 @@ function App() {
       <form onSubmit={handleSubmit}>
         <select value={selectedOption} onChange={handleSelectChange}>
           <option value="planets">Planets</option>
-          <option value="people">People</option>
+          <option selected value="people">People</option>
           <option value="starships">Starships</option>
         </select>
         <input
